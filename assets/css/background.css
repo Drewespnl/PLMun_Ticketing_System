@@ -1,0 +1,42 @@
+body {
+    position: relative;
+    isolation: isolate;
+    min-height: 100vh;
+    background: #111;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: -5%;
+    z-index: -1;
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.40),
+            rgba(0, 0, 0, 0.60)
+        ),
+        url("../img/plmun-bg.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    animation: plmunBackground 25s ease-in-out infinite alternate;
+}
+
+@keyframes plmunBackground {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.12);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body::before {
+        animation: none;
+    }
+}

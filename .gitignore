@@ -1,0 +1,27 @@
+# Local environment
+.env
+.env.*
+!.env.example
+
+# Database backups
+*.sql
+*.sql.zip
+
+# Temporary files
+*.log
+*.tmp
+
+# Operating system
+.DS_Store
+Thumbs.db
+
+# Dependencies
+/vendor/
+
+/config/db.php
+/config/brevo.php
+/config/payment.php
+/vendor/
+.env
+.env.*
+*.log
